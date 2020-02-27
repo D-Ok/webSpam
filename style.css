@@ -1,0 +1,396 @@
+/*
+COLORS
+background: rgb(34, 28, 36);
+close button: rgb(255,18,62);
+send button: rgb(185,59,187);
+lines: rgb(129,41,197);
+ */
+
+.text{
+    color: white;
+}
+
+.header{
+    float: left;
+    margin: 3px 10px;
+    position: center;
+    border-bottom-width: 2px;
+    border-color: rgb(129,41,197);
+    border-bottom-style: solid;
+    padding: 0 0 5px 0;
+
+    text-align: center;
+}
+
+.header.templates{
+    width: calc(100% - 164px);
+}
+
+.header.email{
+    margin-left: 5%;
+    width: 90%;
+}
+
+.name {
+    font-size: 5vh;
+    width: 98vw;
+    text-align: center;
+    margin: 10px;
+}
+
+body{
+    background: rgb(34, 28, 36);
+}
+.grid-container {
+    display: grid;
+    grid-gap: 2px;
+}
+
+.grid-container.main{
+    grid-template-columns: 60vw 1vw 27vw;
+    grid-template-rows: 38vh 45vh;
+    margin: 2vw;
+    grid-row-gap: 2vh;
+    grid-column-gap: 3vw;
+}
+
+.grid-button{
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 14px;
+    float: right;
+
+}
+
+.grid-button:focus{
+    outline: none;
+}
+
+.closeButton{
+    background-color: rgb(255,18,62);
+    border-color: rgb(255,18,62);
+    width: 66px;
+    height: 30px;
+    margin: 3px;
+}
+
+.closeButton:hover{
+    background-color: darkred;
+    border-color: darkred;
+}
+
+#editButton{
+    width: 30%;
+    height: 40px;
+    background-color: rgb(185,59,187);
+    border-color: rgb(185,59,187);
+    color: white;
+    float: left;
+    margin: 3px;
+}
+
+#editButton:hover{
+    background-color: rgb(129,41,197);
+    border-color: rgb(129,41,197);
+}
+
+.closeButton.listButton{
+    width: 30%;
+    height: 40px;
+    float: right;
+}
+
+
+hr.grid-item{
+    border-style: none;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: rgb(185,59,187);
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    margin-left: 4px;
+}
+
+.grid-item.emails{
+    grid-row: 1 / span 2;
+    grid-column: 3;
+}
+
+.block{
+    border-radius: 25px;
+    border-style: solid;
+    border-color: rgb(129,41,197);
+    padding: 5px;
+}
+
+/*mainMassage styles*/
+
+.mainMassage{
+    padding: 0px;
+}
+
+.paste{
+    alignment: left;
+    align-content: center;
+    background-color: rgb(34, 28, 36);
+    color: white;
+    border-style: none;
+    margin: 8px 5px;
+    width: 30%;
+    font-size: 14px;
+
+}
+
+.paste:hover{
+    color: rgb(185,59,187);
+}
+
+.paste:focus{
+    outline: none;
+}
+
+.surnameButton{
+    border-right: solid;
+    border-left: solid;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-color: rgb(129,41,197);
+}
+
+
+hr{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(129,41,197);
+    margin: 1px 0px;
+}
+
+#messageTheme{
+    margin: 6vh 0px 0px 0px;
+    padding: 2px 1vw;
+    width: 57.5vw;
+    border: 0;
+    color: black;
+    font-size: 18px;
+}
+
+#messageTheme:focus{
+    outline: none;
+}
+
+
+#messageText {
+ width: 57.5vw;
+    height: 55%;
+    border: 0;
+    overflow-y: auto;
+    resize: none;
+    color:black;
+    font-size: 16px;
+    padding: 0px 1vw;
+}
+
+#messageText:focus{
+    outline: none;
+}
+
+.saveTemplateButton{
+    background-color: rgb(34, 28, 36);
+    float: left;
+}
+
+.sendButton{
+  background-color: rgb(185,59,187);
+    float: right;
+}
+
+.messButton{
+    color: white;
+    border-radius: 25px;
+    margin: 10px;
+    font-size: 14px;
+    padding: 10px;
+    border-color: rgb(185,59,187);
+    border-width: 2px;
+    width: 30%;
+    border-style: solid;
+}
+
+.messButton:hover{
+    background-color: rgb(129,41,197);
+    border-color: rgb(129,41,197);
+}
+
+.messButton:focus{
+    outline: none;
+}
+
+/*template window*/
+.notButtons{
+    width: 99%;
+    height: 80%;
+    padding: 1px;
+}
+
+.buttons{
+    height: 14%;
+}
+
+.changeTempl{
+    height: 80%;
+    width: 8%;
+    background-color: rgb(34, 28, 36);
+    color: rgb(185,59,187);
+    border-style: none;
+    float:left;
+    font-size: 25px;
+    font-style: oblique;
+}
+
+.changeTempl:focus{
+    outline: none;
+}
+
+.changeTempl:hover{
+    color: white;
+}
+
+#nextButton{
+    float: right;
+}
+
+#preButton{
+    margin-top: 4vh;
+}
+
+#templateMess{
+    height: 86%;
+    width: 81%;
+    background: white;
+    resize: none;
+    overflow-y: auto;
+    float: left;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(129,41,197);
+    border-top-style: none;
+    color: black;
+    font-size: 16px;
+    padding: 1px 4px;
+    margin: 0px;
+}
+
+#templateTheme{
+    margin-top: 4px;
+    height: 11%;
+    width: 81%;
+    background: white;
+    resize: none;
+    float: left;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(129,41,197);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 2px;
+    padding-bottom: 0;
+    padding-left: 8px;
+    font-size: 18px;
+    margin-right: 0px;
+}
+
+.chooseTempl{
+    background-color: rgb(185,59,187);
+    float: left;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 7px;
+    border-width: 0;
+    width: 66px;
+    border-style: solid;
+    margin: 3px;
+}
+
+.chooseTempl:focus{
+    outline: none;
+}
+
+.chooseTempl:hover{
+    border-color: rgb(129,41,197);
+    background-color: rgb(129,41,197);
+}
+
+.emailName{
+    margin: 5px 2px;
+    border-bottom-color: rgb(185,59,187);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.emailList{
+    overflow-y: auto;
+    height: 85%;
+}
+
+.minEmailButton{
+    background-color: rgb(34, 28, 36);
+    float: right;
+    color: rgb(255,18,62);
+    border: 0;
+    font-style: inherit;
+    font-weight: bold;
+}
+
+.completeDelete{
+    border-style: solid;
+    border-radius: 7px;
+    border-color: rgb(255,18,62);
+    border-width: 2px;
+}
+
+.minEmailButton:focus{
+    outline: none;
+}
+
+.minEmailButton:hover{
+    color:darkred;
+}
+
+.hiddenT, .hiddenM{
+    display: none;
+    position: fixed;
+}
+
+/*form style*/
+#addNewEmail{
+    width: 400px;
+    height: 200px;
+    position: fixed;
+    background-color: rgb(34, 28, 36);
+    align-content: center;
+    top: calc(50vh - 100px);
+    right: calc(50vw - 200px);
+    display: none;
+}
+
+.form.text{
+  margin: 10px;
+}
+
+.form.header{
+    width: 95%;
+    border-color: rgb(185,59,187);
+}
+
+.back{
+    background-color: rgb(34, 28, 36);
+}
+
+.addUser{
+    background-color: rgb(185,59,187);
+    float: right;
+}

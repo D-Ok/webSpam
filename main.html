@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="1.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Spammer</title>
+</head>
+<body>
+<p class="main name text">Spammer</p>
+<div class="grid-container main" id="mainBlock">
+    <div class = 'block examples toClose grid-item'>
+        <div class = "buttons">
+            <button class="chooseTempl" onclick="chooseTemplate()">Choose</button>
+            <p class="text header templates">Templates</p>
+            <button class ="closeButton grid-button"></button>
+            <button class ="editButton grid-button"></button>
+        </div>
+        <div class ="notButtons">
+            <button class="changeTempl preButton"><</button>
+            <div id="templateTheme">Theme</div>
+            <button class="changeTempl nextButton">></button>
+            <textarea id="templateMess" readonly disabled>Message</textarea>
+
+        </div>
+    </div>
+
+    <hr class="grid-item">
+
+    <div class = 'block toClose emails grid-item'>
+        <div class = "">
+            <p class="text header email">Email`s</p>
+            <button class ="closeButton grid-button"></button>
+            <button class ="editButton grid-button" onclick='openForm()'></button>
+        </div>
+        <div class = "emailList notButtons" >
+            <dl id="allEmails">
+                <dt class = 'emailName text'>example@example.com
+                    <button class="minEmailButton">X</button>
+                </dt>
+                <dt class = 'emailName text'>example@example.com
+                    <button class="minEmailButton">X</button>
+                </dt>
+                <dt class = 'emailName text'>example@example.com
+                    <button class="minEmailButton">X</button>
+                </dt>
+                <dt class = 'emailName text'>example@example.com
+                    <button class="minEmailButton">X</button>
+                </dt>
+                <dt class = 'emailName text'>example@example.com
+                    <button class="minEmailButton">X</button>
+                </dt>
+            </dl>
+        </div>
+    </div>
+    <div class = 'block mainMassage grid-item'>
+        <div class = "pasteButtons">
+            <button class ="nameButton paste">Name</button>
+            <button class ="surnameButton paste">Surname</button>
+            <button class = "fatherName paste">FatherName</button>
+        </div>
+        <hr>
+        <input id="messageTheme" placeholder="Theme">
+        <hr>
+        <textarea id="messageText" placeholder="Message"></textarea>
+        <button class="saveTemplateButton messButton">Save template</button>
+        <button class ="sendButton messButton">Send</button>
+    </div>
+</div>
+<form class="block" id = "addNewEmail" >
+    <label class="header text form">Add new email</label><br>
+    <label for="name" class="text form">First name:</label>
+    <input type="text" id="name" name="fname"><br>
+    <label class="text form" for="surname">Surname:</label>
+    <input type="text" id="surname"><br>
+    <label class="text form" for="fname">Father name:</label>
+    <input type="text" id="fname"><br>
+    <label class="text form" for="uEmail">e-mail:</label>
+    <input type="text" id="uEmail"><br>
+    <button class="back messButton" onclick="back()">Back</button>
+    <button type="submit" class=" messButton addUser">Submit</button>
+</form>
+</body>
+</html>

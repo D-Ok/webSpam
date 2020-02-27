@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/front.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Spammer</title>
+</head>
+<body>
+<p class="main name text">Spammer</p>
+<div class="grid-container main" id="mainBlock">
+    <div class = 'block examples toClose grid-item'>
+        <div class = "buttons">
+            <button class="chooseTempl" onclick="chooseTemplate()">Choose</button>
+            <p class="text header templates">Templates</p>
+            <button class ="closeButton grid-button text" onclick="deleteTemplate()">Delete</button>
+        </div>
+        <div class ="notButtons">
+            <button id="preButton" class="changeTempl" onclick="preTemp()"><</button>
+            <div id="templateTheme" class="0"><%=theme%></div>
+            <textarea id="templateMess" readonly disabled><%=text%></textarea>
+            <button id="nextButton" class="changeTempl" onclick="nextTemp()">></button>
+        </div>
+    </div>
+
+    <hr class="grid-item">
+
+    <div class = 'block toClose emails grid-item'>
+        <p class="text header email">Email`s</p>
+        <div class = "emailList notButtons" >
+            <dl id="allEmails">
+                <% for( var i = 0; i<emails.length; i++){%>
+                    <dt class = 'emailName text'><%=emails[i].email%>
+                        <button class="minEmailButton" onclick="clickDeleteEmail(this)">X</button>
+                    </dt>
+                <%}%>
+            </dl>
+        </div>
+        <button id = "editButton" class ="grid-button  listButton" onclick='openForm()'>Add user</button>
+        <button class ="closeButton grid-button text listButton" onclick="deleteMode()" >Delete</button>
+    </div>
+    <div class = 'block mainMassage grid-item'>
+        <input id="messageTheme" placeholder="Theme">
+        <hr>
+        <textarea id="messageText" placeholder="Message"></textarea>
+        <button class="saveTemplateButton messButton" onclick="addNewTemplate()">Save template</button>
+        <button class ="sendButton messButton" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+<form class="block" id = "addNewEmail" >
+    <label class="header text form">Add new email</label><br>
+    <label for="name" class="text form">First name:</label>
+    <input type="text" id="name" name="fname"><br>
+    <label class="text form" for="surname">Surname:</label>
+    <input type="text" id="surname"><br>
+    <label class="text form" for="fname">Father name:</label>
+    <input type="text" id="fname"><br>
+    <label class="text form" for="uEmail">e-mail:</label>
+    <input type="text" id="uEmail"><br>
+    <button class="back messButton" onclick="back()">Back</button>
+    <button type="button" class=" messButton addUser" onclick="addNewEmail()">Submit</button>
+    <label class="text" id="rule"></label>
+</form>
+</body>
+</html>
